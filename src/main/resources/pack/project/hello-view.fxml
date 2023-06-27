@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="798.0" prefWidth="1540.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pack.project.Controller">
+   <AnchorPane prefHeight="854.0" prefWidth="530.0" style="-fx-background-color: black;">
+      <ImageView fx:id="imglogo" fitHeight="373.0" fitWidth="515.0" layoutX="9.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@ezgif.com-video-to-gif1.gif" />
+      </ImageView>
+      <ImageView fx:id="matlogo" fitHeight="162.0" fitWidth="191.0" layoutX="182.0" layoutY="586.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@ezgif.com-video-to-gif6.gif" />
+      </ImageView>
+   </AnchorPane>
+   <AnchorPane layoutX="530.0" layoutY="-3.0" prefHeight="860.0" prefWidth="1036.0" style="-fx-background-color: white;">
+      <PasswordField fx:id="txtpassword" layoutX="217.0" layoutY="407.0" prefHeight="26.0" prefWidth="500.0" promptText="Password" style="-fx-background-color: white; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #262626;">
+         <font>
+            <Font size="20.0" />
+         </font></PasswordField>
+      <TextField fx:id="user" layoutX="217.0" layoutY="337.0" prefHeight="26.0" prefWidth="500.0" promptText="User Name" style="-fx-background-color: white; -fx-border-color: #262626; -fx-border-width: 0px 0px 2px 0px;">
+         <font>
+            <Font size="20.0" />
+         </font></TextField>
+      <Label fx:id="accestxt" layoutX="309.0" layoutY="78.0" text="Acces Your Account">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="welcometxt" layoutX="357.0" layoutY="14.0" text="Welcome" textFill="#242424b2">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Label>
+      <Label layoutX="219.0" layoutY="463.0" text="Forgot Your Password?">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Button fx:id="loginbutton" layoutX="390.0" layoutY="509.0" mnemonicParsing="false" onAction="#LoginPress" prefHeight="49.0" prefWidth="153.0" style="-fx-background-color: #2424249b;" text="LOGIN" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="455.0" layoutY="566.0" text="or">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Button fx:id="facebookbutton" layoutX="285.0" layoutY="593.0" mnemonicParsing="false" onAction="#facebook" prefHeight="50.0" prefWidth="144.0" style="-fx-background-color: #3873ff;" text="    FACEBOOK" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="gmailbutton" layoutX="511.0" layoutY="593.0" mnemonicParsing="false" onAction="#gmail" prefHeight="50.0" prefWidth="144.0" style="-fx-background-color: red;" text="     GMAIL" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="logouser" fitHeight="27.0" fitWidth="25.0" layoutX="170.0" layoutY="347.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@account-25-16.png" />
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="33.0" layoutY="324.0" pickOnBounds="true" preserveRatio="true">
+         <!--                  <Image url="@lock-62-16.png" />-->
+      </ImageView>
+      <ImageView fx:id="locklogo" fitHeight="27.0" fitWidth="33.0" layoutX="169.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@lock-62-64.png" />
+      </ImageView>
+      <ImageView fitHeight="119.0" fitWidth="175.0" layoutX="244.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+         <!--                  <Image url="@account-27-64.png" />-->
+      </ImageView>
+      <ImageView fx:id="accountlogo" fitHeight="170.0" fitWidth="201.0" layoutX="382.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@account-27-512.png" />
+      </ImageView>
+      <ImageView fx:id="flogo" fitHeight="40.0" fitWidth="33.0" layoutX="293.0" layoutY="602.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@facebook-133-64.png" />
+      </ImageView>
+      <ImageView fx:id="glogo" fitHeight="33.0" fitWidth="33.0" layoutX="527.0" layoutY="602.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@gmail-39-64.png" />
+      </ImageView>
+      <Text layoutX="221.0" layoutY="720.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Account?">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button layoutX="378.0" layoutY="690.0" mnemonicParsing="false" onAction="#chooseInSignup" style="-fx-background-color: white;" text="Sign Up" textFill="#242424b9">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+   </AnchorPane>
+</AnchorPane>

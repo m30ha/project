@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="798.0" prefWidth="1540.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pack.project.Controller">
+   <AnchorPane prefHeight="845.0" prefWidth="530.0" style="-fx-background-color: black;">
+      <ImageView fitHeight="162.0" fitWidth="191.0" layoutX="182.0" layoutY="586.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@ezgif.com-video-to-gif6.gif" />
+      </ImageView>
+      <ImageView fitHeight="373.0" fitWidth="515.0" layoutX="79.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@ezgif.com-video-to-gif8.gif" />
+      </ImageView>
+   </AnchorPane>
+   <TextField layoutX="693.0" layoutY="145.0" prefHeight="28.0" prefWidth="200.0" promptText="First Name" style="-fx-background-color: white; -fx-border-color: #262626; -fx-border-width: 0px 0px 2px 0px 2px;">
+      <font>
+         <Font size="20.0" />
+      </font></TextField>
+   <Text fill="#242424a3" layoutX="835.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign up">
+      <font>
+         <Font name="System Bold" size="50.0" />
+      </font>
+   </Text>
+   <TextField layoutX="993.0" layoutY="145.0" prefHeight="28.0" prefWidth="200.0" promptText="Last Name" style="-fx-background-color: white; -fx-border-color: #262626; -fx-border-width: 0px 0px 2px 0px 0px;">
+      <font>
+         <Font size="20.0" />
+      </font></TextField>
+   <TextField fx:id="userSeller" layoutX="693.0" layoutY="225.0" prefHeight="26.0" prefWidth="500.0" promptText="User Name" style="-fx-background-color: white; -fx-border-color: #262626; -fx-border-width: 0px 0px 2px 0px 0px;">
+      <font>
+         <Font size="20.0" />
+      </font></TextField>
+   <TextField fx:id="emailSeller" layoutX="693.0" layoutY="381.0" prefHeight="26.0" prefWidth="500.0" promptText="E-mail" style="-fx-background-color: white; -fx-border-color: #262626; -fx-border-width: 0px 0px 2px 0px 0px;">
+      <font>
+         <Font size="20.0" />
+      </font></TextField>
+   <TextField layoutX="693.0" layoutY="458.0" prefHeight="26.0" prefWidth="500.0" promptText="Phone Number" style="-fx-background-color: white; -fx-border-color: #262626; -fx-border-width: 0px 0px 2px 0px 0px;">
+      <font>
+         <Font size="20.0" />
+      </font></TextField>
+   <Button layoutX="835.0" layoutY="637.0" mnemonicParsing="false" onAction="#CreateAccSeller" prefHeight="46.0" prefWidth="204.0" style="-fx-background-color: #242424a3;" text="CREATE ACCOUNT" textFill="WHITE">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Button>
+   <Text layoutX="720.0" layoutY="607.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I Agree whith">
+      <font>
+         <Font size="17.0" />
+      </font></Text>
+   <Text fill="#d11010" layoutX="834.0" layoutY="607.0" strokeType="OUTSIDE" strokeWidth="0.0" text="privacy">
+      <font>
+         <Font size="17.0" />
+      </font></Text>
+   <Text layoutX="814.0" layoutY="554.0" strokeType="OUTSIDE" strokeWidth="0.0" text="and" />
+   <Text fill="#d11010" layoutX="937.0" layoutY="606.0" strokeType="OUTSIDE" strokeWidth="0.0" text="policy">
+      <font>
+         <Font size="17.0" />
+      </font></Text>
+   <Text layoutX="691.0" layoutY="750.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have account ?">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Text>
+   <Button layoutX="909.0" layoutY="720.0" mnemonicParsing="false" onAction="#loginpage" style="-fx-background-color: white;" text="Sign in" textFill="#242424a3">
+      <font>
+         <Font name="System Bold" size="20.0" />
+      </font>
+   </Button>
+   <PasswordField fx:id="passSeller" layoutX="693.0" layoutY="302.0" prefHeight="26.0" prefWidth="500.0" promptText="Password" style="-fx-background-color: white; -fx-border-color: #262626; -fx-border-width: 0px 0px 2px 0px 0px;">
+      <font>
+         <Font size="20.0" />
+      </font></PasswordField>
+   <TextField layoutX="693.0" layoutY="535.0" prefHeight="26.0" prefWidth="500.0" promptText="Company" style="-fx-background-color: white; -fx-border-color: #262626; -fx-border-width: 0px 0px 2px 0px 0px;">
+      <font>
+         <Font size="20.0" />
+      </font></TextField>
+   <CheckBox layoutX="693.0" layoutY="592.0" mnemonicParsing="false" />
+   <Text layoutX="895.0" layoutY="607.0" strokeType="OUTSIDE" strokeWidth="0.0" text="and">
+      <font>
+         <Font size="17.0" />
+      </font></Text>
+</AnchorPane>
