@@ -3,6 +3,8 @@ package pack.project;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -10,27 +12,42 @@ import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Region;
 import javafx.stage.Stage;
 
 
-import java.awt.*;
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.sql.SQLException;
-import java.util.Objects;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.image.ImageView;
+import pack.project.model.Fruit;
+
+
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.awt.*;
+import java.net.URI;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+import java.util.ResourceBundle;
+
+
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 
+import pack.project.ItemController;
+import pack.project.MyListener;
 
-public class Controller {
+
+
+
+
+public class Controller{
 
     public ImageView imglogo;
     public ImageView matlogo;
@@ -199,7 +216,7 @@ public class Controller {
             }
             //test for users screen(home page)
             else if (DataBase.checkUsers(user.getText(), txtpassword.getText())) {
-                Parent root = FXMLLoader.load(getClass().getResource("test2.fxml"));
+                Parent root = FXMLLoader.load(getClass().getResource("homepage.fxml"));
                 stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 scene = new Scene(root);
                 stage.setScene(scene);
@@ -240,11 +257,9 @@ public class Controller {
             alert.setHeaderText("There was a problem!!!");
             alert.showAndWait();
         } else {
-            if ((!DataBase.checkSellers(txtUserSeller.getText(), txtPassSeller.getText()) && txtUserSeller.getText() != null && txtPassSeller.getText() != null)) {
-                int s = DataBase.creatSeller(new Sellers(txtUserSeller.getText(), txtPassSeller.getText(),
-                        txtEmailSeller.getText(), txtCompany.getText()));
-
-                System.out.println(s);
+            if ((!DataBase.checkSellers(userSeller.getText(), passSeller.getText()) && userSeller.getText() != null && passSeller.getText() != null)) {
+                int s = DataBase.creatSeller(new Sellers(userSeller.getText(), passSeller.getText(),
+                        emailSeller.getText(), txtCompany.getText()));
 
                 Parent root = FXMLLoader.load(getClass().getResource("test3.fxml"));
                 stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -270,12 +285,10 @@ public class Controller {
             alert.setHeaderText("There was a problem!!!");
             alert.showAndWait();
         } else {
-            if ((!DataBase.checkUsers(txtUserBuyer.getText(), txtPassBuyer.getText())) && txtUserBuyer.getText() != null && txtPassBuyer.getText() != null) {
-                int d = DataBase.creatUser(new Users(txtUserBuyer.getText(), txtPassBuyer.getText(), txtEmailBuyer.getText()));
+            if ((!DataBase.checkUsers(userBuyer.getText(), passBuyer.getText())) && userBuyer.getText() != null && passBuyer.getText() != null) {
+                int d = DataBase.creatUser(new Users(userBuyer.getText(), passBuyer.getText(), emailBuyer.getText()));
 
-                System.out.println(d);
-
-                Parent root = FXMLLoader.load(getClass().getResource("test2.fxml"));
+                Parent root = FXMLLoader.load(getClass().getResource("homepage.fxml"));
                 stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 scene = new Scene(root);
                 stage.setScene(scene);
