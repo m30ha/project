@@ -15,8 +15,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Region;
+import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
 
@@ -36,9 +35,6 @@ import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
 
 import pack.project.ItemController;
 import pack.project.MyListener;
@@ -155,6 +151,17 @@ public class Controller{
 
     @FXML
     private ScrollPane scroll;
+    @FXML
+    BorderPane contentPane;
+    public void closeApp(){
+//        HelloApplication.getWindow().close();
+    }
+    public void showHomeWindow() throws IOException {
+        contentPane.setCenter(new HomeView().getView());
+    }
+    public void showCartView() throws IOException {
+        contentPane.setCenter(new CartView().getView());
+    }
 
     public void loginpage(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("hello-view.fxml")));

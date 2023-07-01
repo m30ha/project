@@ -18,10 +18,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 //import model.Fruit;
-import pack.project.DataBase;
-import pack.project.OnlineShop;
-import pack.project.Sellers;
-import pack.project.Users;
 import pack.project.model.Fruit;
 
 

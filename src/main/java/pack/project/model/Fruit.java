@@ -10,6 +10,7 @@ public class Fruit {
     private String imgValue;
     private String color;
     private String group;
+
     public void setRate(String rate){
         this.rate=rate;
     }
@@ -20,7 +21,6 @@ public class Fruit {
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -80,4 +80,5 @@ public class Fruit {
     public void setColor(String color) {
         this.color = color;
     }
+
 }
